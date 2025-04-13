@@ -30,7 +30,6 @@ Automatically captures screenshots from YouTube videos whenever the scene (or sl
 - If it detects a **significant visual change**, it assumes the slide has changed.
 - Then, it captures a screenshot and saves it to your default Downloads folder.
 
-> ℹ️ The extension remains **OFF by default**. You can toggle it ON when needed.
 
 ---
 
