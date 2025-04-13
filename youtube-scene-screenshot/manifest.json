@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Slide Screenshot Taker",
+  "version": "1.0",
+  "description": "Takes screenshots whenever a YouTube slide changes.",
+  "permissions": ["activeTab", "tabs", "downloads", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+"permissions": [
+  "activeTab",
+  "tabs",
+  "downloads",
+  "storage"
+],
+"host_permissions": [
+  "<all_urls>"
+],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
